@@ -8,6 +8,8 @@ dm_number = 0
 d_numberslot1 = "N/A"
 d_numberslot2 = "N/A"
 d_numberslot3 = "N/A"
+d_numberslot4 = "N/A"
+d_numberslot5 = "N/A"
 user = "" #(User input)
 helplist = """--- Commands ---
 \u2023 !help
@@ -30,9 +32,13 @@ def roll():
     global d_numberslot1
     global d_numberslot2
     global d_numberslot3
+    global d_numberslot4
+    global d_numberslot5
 
     print("Rolling the dice...")
     d_number = random.randint(1,6)
+    d_numberslot5 = str(d_numberslot4)
+    d_numberslot4 = str(d_numberslot3)
     d_numberslot3 = str(d_numberslot2)
     d_numberslot2 = str(d_numberslot1)
     d_numberslot1 = str(d_number)
@@ -58,7 +64,8 @@ def menu():
         menu_r()
         
     elif user == "!history":
-        print("Previous number: {}\nPenultimate number: {}\nAntepenult number: {}".format(d_numberslot1,d_numberslot2,d_numberslot3))
+        print("[ATTENTION: only shows stats for single roll, not multiple roll]")
+        print("Last 5 numbers: {} , {} , {} , {} , {}".format(d_numberslot1,d_numberslot2,d_numberslot3,d_numberslot4,d_numberslot5))
         menu_r()
         
     elif user == "!about":
