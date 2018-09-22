@@ -1,3 +1,4 @@
+#- Dice simulator 2018 by Ducc -
 import random
 
 #Variables
@@ -10,7 +11,6 @@ helplist = """--- Commands ---
 \u2023 !help
 \u2023 !roll
 \u2023 !rollmultiple
-\u2023 !chance
 \u2023 !history
 \u2023 !about\n"""
 running = True
@@ -58,6 +58,9 @@ def menu():
             print("Dice {0} = {1}".format(dicenumber,d_number))
             dicenumber += 1             
         menu_r()
+    else:
+        print("Unknown command")
+        menu_r()
                    
 def menu_r():
     if running == True:
@@ -67,7 +70,3 @@ def menu_r():
 print("\u25ba ---------- Dice Simulator 2018\u2122 ---------- \u25c4")
 print("Welcome user! type !help to see more commands\nTip: Type !roll to roll the dice")
 menu()
-
-
-    
-    
