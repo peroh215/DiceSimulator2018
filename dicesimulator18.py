@@ -2,7 +2,7 @@
 ## -*- coding: utf-8 -*-
 
 '''
-File name: dicesimulator18.py                   
+File name: dice_simulator_18 (v1.3)                  
 Author: Pedro Henrique Rincon Santos 
 Username: Ducc                       
 Date created: 9/20/2018              
@@ -114,7 +114,6 @@ def n_counter():
     global n4
     global n5
     global n6
-    dm_number -= 1
     if dm_number == 1:
         n1 += 1
     elif dm_number == 2:
