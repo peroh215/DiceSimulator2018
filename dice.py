@@ -34,6 +34,7 @@ def menu():
         print("""--- Commands ---
 \u2023 !help
 \u2023 !roll
+\u2023 !rollmultiple
 \u2023 !history
 \u2023 !about\n""")
         menu_r()        
@@ -46,8 +47,18 @@ def menu():
     elif user == "!about":
         print(aboutmsg)
         menu_r()
-        
-
+    elif user == "!rollmultiple":
+        dicenumber = 1
+        randn = 0
+        user2 = input("How many dices would you like to roll? (0-20)\n> ")
+        user2 = int(user2)
+        user2 += 1
+        for number in range(1,user2):
+            randn = random.randint(1,6)
+            print("Dice {0} = {1}".format(dicenumber,randn))
+            dicenumber += 1             
+        menu_r()
+                   
 def menu_r():
     if running == True:
         menu()
