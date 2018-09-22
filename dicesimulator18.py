@@ -1,8 +1,19 @@
-#                                           --- Dice simulator 2018 by Ducc ---
-import random
-import operator
+#!/usr/bin/env python
+## -*- coding: utf-8 -*-
 
-#Variables
+'''
+File name: dicesimulator18.py                   
+Author: Pedro Henrique Rincon Santos 
+Username: Ducc                       
+Date created: 9/20/2018              
+Date last modified: 9/22/2018        
+Python Version: 3.7
+'''
+
+# Imports
+import random
+
+# Variables
 d_number = 0
 dm_number = 0
 d_numberslot1 = "N/A"
@@ -24,9 +35,8 @@ n3 = 0
 n4 = 0
 n5 = 0
 n6 = 0
-#nma = 0 #number most appeared [OBSOLETE]
 
-#Functions
+# Functions
 def roll():
     global d_number
     global d_numberslot1
@@ -122,7 +132,7 @@ def n_counter():
         print("dm_number = {}".format(dm_number))
         return None
 
-#Main
+# Main
 print("\u25ba ---------- Dice Simulator 2018\u2122 ---------- \u25c4")
 print("Welcome user! type !help to see more commands\nTip: Type !roll to roll the dice")
 menu()
