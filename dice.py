@@ -1,4 +1,4 @@
-#- Dice simulator 2018 by Ducc -
+#                                              --- Dice simulator 2018 by Ducc ---
 import random
 
 #Variables
