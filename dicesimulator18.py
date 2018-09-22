@@ -2,7 +2,7 @@
 ## -*- coding: utf-8 -*-
 
 '''
-File name: dice_simulator_18 (v1.3)                  
+File name: dice_simulator_18 (v1.3.1)                  
 Author: Pedro Henrique Rincon Santos 
 Username: Ducc                       
 Date created: 9/20/2018              
@@ -29,6 +29,7 @@ helplist = """--- Commands ---
 \u2023 !history
 \u2023 !about\n"""
 running = True
+version = ("v1.3.1")
 n1 = 0
 n2 = 0
 n3 = 0
@@ -71,7 +72,9 @@ def menu():
         menu_r()
         
     elif user == "!about":
-        print("\n\u2043 Made by Pedro Henrique Rincon Santos (Ducc) \u2043\n")
+        print("\nYou are running Dice Simulator 2018 {}".format(version))
+        print("License: GNU GENERAL PUBLIC LICENSE Version 3 (29 June 2007)")
+        print("\u2043 Made by Pedro Henrique Rincon Santos (Ducc / Blackman White) \u2043\n")
         menu_r()
         
     elif user == "!rollmultiple":
