@@ -1,4 +1,4 @@
-#                                               --- Dice simulator 2018 by Ducc ---
+#                                           --- Dice simulator 2018 by Ducc ---
 import random
 import operator
 
@@ -24,7 +24,7 @@ n3 = 0
 n4 = 0
 n5 = 0
 n6 = 0
-nma = 0 #number most appeared
+#nma = 0 #number most appeared [OBSOLETE]
 
 #Functions
 def roll():
@@ -45,14 +45,6 @@ def roll():
     print("You rolled {}!".format(d_number))
 
 def menu():
-    global dm_number
-    global n1
-    global n2
-    global n3
-    global n4
-    global n5
-    global n6
-    global nma
     user = input("> ")
 
     if user == "!roll":
@@ -73,21 +65,32 @@ def menu():
         menu_r()
         
     elif user == "!rollmultiple":
-        n1,n2,n3,n4,n5,n6 = 0,0,0,0,0,0
-        dicenumber = 1
-        dm_number = 0
-        user2 = input("How many dices would you like to roll?\n> ")
-        user2 = int(user2) + 1        
-        for number in range(1,user2):
-            dm_number = random.randint(1,6)
-            print("Dice {0} = {1}".format(dicenumber,dm_number))
-            dicenumber += 1
-            n_counter()
-        print("\n---- Stats: ----\nTimes number one appeared: {}\nTimes number two appeared: {}\nTimes number three appeared: {}\nTimes number four appeared: {}\nTimes number five appeared: {}\nTimes number six appeared: {}".format(nma,n1,n2,n3,n4,n5,n6))
-        menu_r()
+        m_roll()
+        
     else:
         print("Unknown command")
         menu_r()
+
+def m_roll():
+    global dm_number
+    global n1
+    global n2
+    global n3
+    global n4
+    global n5
+    global n6
+    n1,n2,n3,n4,n5,n6 = 0,0,0,0,0,0
+    dicenumber = 1
+    dm_number = 0
+    user2 = input("How many dices would you like to roll?\n> ")
+    user2 = int(user2) + 1        
+    for number in range(1,user2):
+        dm_number = random.randint(1,6)
+        print("Dice {0} = {1}".format(dicenumber,dm_number))
+        dicenumber += 1
+        n_counter()
+    print("\n---- Stats: ----\nTimes number one appeared: {}\nTimes number two appeared: {}\nTimes number three appeared: {}\nTimes number four appeared: {}\nTimes number five appeared: {}\nTimes number six appeared: {}".format(n1,n2,n3,n4,n5,n6))
+    menu_r()
                    
 def menu_r():
     if running == True:
@@ -101,7 +104,7 @@ def n_counter():
     global n4
     global n5
     global n6
-    global nma
+    dm_number -= 1
     if dm_number == 1:
         n1 += 1
     elif dm_number == 2:
@@ -115,7 +118,8 @@ def n_counter():
     elif dm_number == 6:
         n6 += 1
     else:
-        print("ERROR")
+        print("COUNTER ERROR, report this bug to https://github.com/BlackmanWhite/DiceSimulator2018/issues")
+        print("dm_number = {}".format(dm_number))
         return None
 
 #Main
