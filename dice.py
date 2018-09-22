@@ -7,7 +7,7 @@ d_numberslot1 = "N/A"
 d_numberslot2 = "N/A"
 d_numberslot3 = "N/A"
 user = "" #(User input)
-aboutmsg = "\u2043 Made by Pedro Henrique Rincon Santos (Blackman White) \u2043"
+aboutmsg = "\n\u2043 Made by Pedro Henrique Rincon Santos (Ducc) \u2043\n"
 running = True
 
 #Functions
@@ -33,13 +33,12 @@ def menu():
     elif user == "!help":
         print("""--- Commands ---
 \u2023 !help
-\u2023 !status
 \u2023 !roll
 \u2023 !history
 \u2023 !about\n""")
         menu_r()        
     elif user == "!status":
-        print("Running = ",running)
+        print("Running = ",running,"\n")
         menu_r()
     elif user == "!history":
         print("Previous number: {}\nPenultimate number: {}\nAntepenult number: {}".format(d_numberslot1,d_numberslot2,d_numberslot3))
@@ -53,7 +52,7 @@ def menu_r():
     if running == True:
         menu()
 
-print(" ----- Dice Simulator 2018\u2122 ----- ")
+print("\u25ba ---------- Dice Simulator 2018\u2122 ---------- \u25c4")
 print("Welcome user! type !help to see more commands")
 print("Tip: Type !roll to roll the dice")
 menu()
