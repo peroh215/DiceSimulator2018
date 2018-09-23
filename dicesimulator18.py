@@ -2,11 +2,11 @@
 ## -*- coding: utf-8 -*-
 
 '''
-File name: dice_simulator_18 (v1.3.1)                  
+File name: dice_simulator_18 (v1.3.2)                  
 Author: Pedro Henrique Rincon Santos 
 Username: Ducc                       
 Date created: 9/20/2018              
-Date last modified: 9/22/2018        
+Date last modified: 9/23/2018        
 Python Version: 3.7
 '''
 
@@ -29,7 +29,7 @@ helplist = """--- Commands ---
 \u2023 !history
 \u2023 !about\n"""
 running = True
-version = ("v1.3.1")
+version = ("v1.3.2")
 n1 = 0
 n2 = 0
 n3 = 0
