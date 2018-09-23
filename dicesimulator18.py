@@ -69,12 +69,12 @@ def menu():
         menu_r()
         
     elif user == "!logs":
-        print("[ATTENTION: only shows stats for single roll, not multiple roll]")
+        print("[ATTENTION: Only shows stats for single roll]")
         print("Last 5 numbers: {} , {} , {} , {} , {} , {}".format(d_numberslot1,d_numberslot2,d_numberslot3,d_numberslot4,d_numberslot5,d_numberslot6))
         menu_r()
         
     elif user == "!about":
-        print("\nYou are running Dice Simulator 2018 {}".format(version))
+        print("\n\u2043You are running Dice Simulator 2018 {}\u2023".format(version))
         print("License: GNU GENERAL PUBLIC LICENSE Version 3 (29 June 2007)")
         print("\u2043 Made by Pedro Henrique Rincon Santos (Ducc / Blackman White) \u2043\n")
         menu_r()
