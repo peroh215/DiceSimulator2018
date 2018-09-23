@@ -2,7 +2,7 @@
 ## -*- coding: utf-8 -*-
 
 '''
-File name: dice_simulator_18 (v1.3.2)                  
+File name: dice_simulator_18 (v1.3.2.1)                  
 Author: Pedro Henrique Rincon Santos 
 Username: Ducc                       
 Date created: 9/20/2018              
@@ -26,10 +26,10 @@ helplist = """--- Commands ---
 \u2023 !help
 \u2023 !roll
 \u2023 !rollmultiple
-\u2023 !history
+\u2023 !logs
 \u2023 !about\n"""
 running = True
-version = ("v1.3.2")
+version = ("v1.3.2.1")
 n1 = 0
 n2 = 0
 n3 = 0
@@ -45,9 +45,11 @@ def roll():
     global d_numberslot3
     global d_numberslot4
     global d_numberslot5
+    global d_numberslot6
 
     print("Rolling the dice...")
     d_number = random.randint(1,6)
+    d_numberslot6 = str(d_numberslot5)
     d_numberslot5 = str(d_numberslot4)
     d_numberslot4 = str(d_numberslot3)
     d_numberslot3 = str(d_numberslot2)
@@ -66,9 +68,9 @@ def menu():
         print(helplist)
         menu_r()
         
-    elif user == "!history":
+    elif user == "!logs":
         print("[ATTENTION: only shows stats for single roll, not multiple roll]")
-        print("Last 5 numbers: {} , {} , {} , {} , {}".format(d_numberslot1,d_numberslot2,d_numberslot3,d_numberslot4,d_numberslot5))
+        print("Last 5 numbers: {} , {} , {} , {} , {} , {}".format(d_numberslot1,d_numberslot2,d_numberslot3,d_numberslot4,d_numberslot5,d_numberslot6))
         menu_r()
         
     elif user == "!about":
