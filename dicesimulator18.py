@@ -2,9 +2,9 @@
 ## -*- coding: utf-8 -*-
 
 '''
-File name: dice_simulator_18 (v1.3.2.1)                  
-Author: Pedro Henrique Rincon Santos 
-Username: Ducc                       
+File name: dice_simulator_18
+Version: 1.3.2.1
+Author: Blackman White                    
 Date created: 9/20/2018              
 Date last modified: 9/23/2018        
 Python Version: 3.7
