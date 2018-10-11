@@ -12,6 +12,7 @@ Python Version: 3.7
 
 # Imports
 import random
+import sys
 
 # Variables
 d_number = 0
@@ -27,7 +28,8 @@ helplist = """--- Commands ---
 \u2023 !roll
 \u2023 !rollmultiple
 \u2023 !logs
-\u2023 !about\n"""
+\u2023 !about
+\u2023 !exit\n"""
 running = True
 version = ("v1.3.2.1")
 n1 = 0
@@ -81,6 +83,9 @@ def menu():
         
     elif user == "!rollmultiple":
         m_roll()
+        
+    elif user == "!exit":
+        sys.exit(0)
         
     else:
         print("Unknown command")
