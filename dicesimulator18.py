@@ -22,7 +22,7 @@ d_numberslot2 = "N/A"
 d_numberslot3 = "N/A"
 d_numberslot4 = "N/A"
 d_numberslot5 = "N/A"
-user = "" #(User input)
+user = "" # User input
 helplist = """--- Commands ---
 \u2023 !help
 \u2023 !roll
@@ -32,12 +32,7 @@ helplist = """--- Commands ---
 \u2023 !exit\n"""
 running = True
 version = ("v1.3.2.1")
-n1 = 0
-n2 = 0
-n3 = 0
-n4 = 0
-n5 = 0
-n6 = 0
+n1=n2=n3=n4=n5=n6=0 #Sets multiple variables to 0 in one line
 
 # Functions
 def roll():
@@ -64,32 +59,32 @@ def menu():
 
     if user == "!roll":
         roll()
-        menu_r()
+        return menu_r()
         
     elif user == "!help":
         print(helplist)
-        menu_r()
+        return menu_r()
         
     elif user == "!logs":
         print("[ATTENTION: Only shows stats for single roll]")
         print("Last 5 numbers: {} , {} , {} , {} , {} , {}".format(d_numberslot1,d_numberslot2,d_numberslot3,d_numberslot4,d_numberslot5,d_numberslot6))
-        menu_r()
+        return menu_r()
         
     elif user == "!about":
         print("\n\u2043You are running Dice Simulator 2018 {}\u2023".format(version))
         print("License: GNU GENERAL PUBLIC LICENSE Version 3 (29 June 2007)")
         print("\u2043 Made by Pedro Henrique Rincon Santos (Ducc / Blackman White) \u2043\n")
-        menu_r()
+        return menu_r()
         
     elif user == "!rollmultiple":
-        m_roll()
+        return m_roll()
         
     elif user == "!exit":
-        sys.exit(0)
+        return sys.exit(0)
         
     else:
         print("Unknown command")
-        menu_r()
+        return menu_r()
 
 def m_roll():
     global dm_number
@@ -99,7 +94,7 @@ def m_roll():
     global n4
     global n5
     global n6
-    n1,n2,n3,n4,n5,n6 = 0,0,0,0,0,0
+    n1=n2=n3=n4=n5=n6=0
     dicenumber = 1
     dm_number = 0
     user2 = input("How many dices would you like to roll?\n> ")
@@ -110,7 +105,7 @@ def m_roll():
         dicenumber += 1
         n_counter()
     print("\n---- Stats: ----\nTimes number one appeared: {}\nTimes number two appeared: {}\nTimes number three appeared: {}\nTimes number four appeared: {}\nTimes number five appeared: {}\nTimes number six appeared: {}".format(n1,n2,n3,n4,n5,n6))
-    menu_r()
+    return menu_r()
                    
 def menu_r():
     if running == True:
